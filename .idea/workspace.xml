@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7944c8f-b6e0-4f0a-afa6-8be4b62a7898" name="Changes" comment="" />
+    <list default="true" id="e7944c8f-b6e0-4f0a-afa6-8be4b62a7898" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/TimServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimServer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,8 +38,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716195208642</updated>
-      <workItem from="1716195209653" duration="1000" />
+      <workItem from="1716195209653" duration="72000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
