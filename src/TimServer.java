@@ -1,4 +1,5 @@
 import java.net.*;
+
 public class TimServer {
     public static void main(String args[])
             throws Exception {
@@ -6,7 +7,6 @@ public class TimServer {
 // Default port number we are going to use
         int portnumber = 8080;
         if (args.length >= 1) {
-
             portnumber = Integer.parseInt(args[0]);
         }
 
@@ -29,7 +29,52 @@ public class TimServer {
             serverMulticastSocket.receive(data);
             String msg = new String(data.getData()).trim();
             System.out.println("Message received from client = " + msg);
+
+            // Calculation
+            String result = calculateExpression(msg);
+            System.out.println(msg + " = " + result);
+
+            // Sends the results
+            byte[] sendData = result.getBytes();
+            DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, data.getAddress(), data.getPort());
+            serverMulticastSocket.send(sendPacket);
         }
         serverMulticastSocket.close();
+    }
+
+    private static String calculateExpression(String expression) {
+        try {
+            String[] parts = expression.split(" ");
+            if (parts.length != 3) {
+                return "ERROR: Invalid Expression";
+            }
+
+            int num1 = Integer.parseInt(parts[0]);
+            String operator = parts[1];
+            int num2 = Integer.parseInt(parts[2]);
+            int result;
+
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                default:
+                    return "ERROR: Unknown Operator";
+            }
+
+            return String.valueOf(result);
+
+        } catch (NumberFormatException e) {
+            return "ERROR: Invalid Number!";
+        }
     }
 }
