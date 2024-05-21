@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7944c8f-b6e0-4f0a-afa6-8be4b62a7898" name="Changes" comment="Skrev server koden">
+    <list default="true" id="e7944c8f-b6e0-4f0a-afa6-8be4b62a7898" name="Changes" comment="Ändrade koden så att den funkade korrekt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
       <updated>1716195208642</updated>
       <workItem from="1716195209653" duration="914000" />
       <workItem from="1716196140633" duration="55000" />
-      <workItem from="1716291876700" duration="2118000" />
+      <workItem from="1716291876700" duration="2813000" />
     </task>
     <task id="LOCAL−00001" summary="Skrev en del av koden för servern">
       <option name="closed" value="true" />
@@ -63,7 +64,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1716293107731</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Ändrade koden så att den funkade korrekt">
+      <option name="closed" value="true" />
+      <created>1716294602847</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1716294602847</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,6 +80,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Skrev en del av koden för servern" />
     <MESSAGE value="Skrev server koden" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skrev server koden" />
+    <MESSAGE value="Ändrade koden så att den funkade korrekt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ändrade koden så att den funkade korrekt" />
   </component>
 </project>

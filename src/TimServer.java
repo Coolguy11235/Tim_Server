@@ -20,10 +20,9 @@ public class TimServer {
 // getByName- returns IP address of given host
         serverMulticastSocket.joinGroup(group);
         System.out.println("joinGroup method is called...");
-        boolean infinite = true;
 
 // Continually receives data and prints them
-        while (infinite) {
+        while (true) {
             byte buf[] = new byte[1024];
             DatagramPacket data = new DatagramPacket(buf, buf.length);
             serverMulticastSocket.receive(data);
@@ -32,15 +31,13 @@ public class TimServer {
 
             // Calculation
             String result = calculateExpression(msg);
-            System.out.println(msg + " = " + result);
+            System.out.println("Result: " + result);
 
             // Sends the results
             byte[] sendData = result.getBytes();
             DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, data.getAddress(), data.getPort());
             serverMulticastSocket.send(sendPacket);
         }
-        serverMulticastSocket.leaveGroup(group);
-        serverMulticastSocket.close();
     }
 
     private static String calculateExpression(String expression) {
