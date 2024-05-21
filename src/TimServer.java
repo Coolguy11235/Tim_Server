@@ -27,7 +27,7 @@ public class TimServer {
             byte buf[] = new byte[1024];
             DatagramPacket data = new DatagramPacket(buf, buf.length);
             serverMulticastSocket.receive(data);
-            String msg = new String(data.getData()).trim();
+            String msg = new String(data.getData(), 0, data.getLength()).trim();
             System.out.println("Message received from client = " + msg);
 
             // Calculation
@@ -39,6 +39,7 @@ public class TimServer {
             DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, data.getAddress(), data.getPort());
             serverMulticastSocket.send(sendPacket);
         }
+        serverMulticastSocket.leaveGroup(group);
         serverMulticastSocket.close();
     }
 
